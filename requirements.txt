@@ -1,5 +1,5 @@
 numpy==1.26.4
 matplotlib==3.8.4
 
-pre-commit
-pytest
+# dev
+pre-commit>=4.6.0

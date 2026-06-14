@@ -16,7 +16,7 @@ class SimpleTriangularGrid(dualiser.Points):
     A simple triangular grid.
     """
 
-    def __init__(self):
+    def __init__(self) -> None:
         """
         Define the points on a simple triangular grid.
 
@@ -68,7 +68,7 @@ class UnitCircle(dualiser.Points):
     The roots of unity on a circle, with the corresponding points at infinity.
     """
 
-    def __init__(self, roots: int):
+    def __init__(self, roots: int) -> None:
         """
         Define the points on a unit circle.
 
@@ -123,7 +123,7 @@ class CubicCurve(dualiser.Points):
     Equally spaced points on a cubic curve, given by ``Y = X^3``.
     """
 
-    def __init__(self, number: int):
+    def __init__(self, number: int) -> None:
         """
         Define the points on a cubic curve.
         """
