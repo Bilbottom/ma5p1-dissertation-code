@@ -23,15 +23,15 @@ class Point:
     y: float
     z: float
 
-    def __init__(self, x: float, y: float, z: float = 1.0):
+    def __init__(self, x: float, y: float, z: float = 1.0) -> None:
         self.x = x
         self.y = y
         self.z = z
 
-    def __str__(self):
+    def __str__(self) -> str:
         return f"({self.x}, {self.y}, {self.z})"
 
-    def __repr__(self):
+    def __repr__(self) -> str:
         return f"Point(x={self.x}, y={self.y}, y={self.z})"
 
     @property
@@ -131,7 +131,7 @@ class Points(abc.ABC):
         plt.show()
 
 
-def _plot_point(point: Point, color: str, **kwargs) -> None:
+def _plot_point(point: Point, color: str, **kwargs: Any) -> None:
     """
     Plot the point on a matplotlib graph.
     """
@@ -144,7 +144,7 @@ def _plot_point(point: Point, color: str, **kwargs) -> None:
         )
 
 
-def _plot_dual(point: Point, **kwargs) -> None:
+def _plot_dual(point: Point, **kwargs: Any) -> None:
     """
     Plot the dual of the point on a matplotlib graph.
     """
@@ -154,7 +154,7 @@ def _plot_dual(point: Point, **kwargs) -> None:
 def _plot_rainbow(
     plotter: Callable,
     points: list[Point],
-    **kwargs,
+    **kwargs: Any,
 ) -> None:
     """
     Plot the points on a matplotlib graph using a colour rainbow.
@@ -168,7 +168,7 @@ def _plot_rainbow(
         plotter(point=point, color=colors[i], **kwargs)
 
 
-def plot_points(points: list[Point], color: str, **kwargs) -> None:
+def plot_points(points: list[Point], color: str, **kwargs: Any) -> None:
     """
     Plot the points on a matplotlib graph.
     """
@@ -179,7 +179,7 @@ def plot_points(points: list[Point], color: str, **kwargs) -> None:
             _plot_point(point=point, color=color, **kwargs)
 
 
-def plot_duals(points: list[Point], color: Any, **kwargs) -> None:
+def plot_duals(points: list[Point], color: Any, **kwargs: Any) -> None:
     """
     Plot the dual of the points on a matplotlib graph.
     """
